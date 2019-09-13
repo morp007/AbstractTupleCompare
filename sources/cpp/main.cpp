@@ -73,6 +73,8 @@ int main(const int /*argc*/, const char *const /*argv*/[])
               << "EQ: " << EQ << std::endl
               << std::endl;
 
+    START(1)
+
     using Arr = std::array<size_t, 100000000>;
     auto a = std::make_unique<Arr>();
     auto b = std::make_unique<Arr>();
@@ -82,11 +84,11 @@ int main(const int /*argc*/, const char *const /*argv*/[])
         (*a)[i] = (*b)[i] = i + 1;
     }
 
-    START(1)
     const auto res = l45_abstractCompare(*a, *b);
-    END(1)
 
     std::cout << "--- result: " << res << std::endl;
+
+    END(1)
 
     return 0;
 }
