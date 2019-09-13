@@ -1,0 +1,4 @@
+/sources/*/*\.exe
+/sources/haskell/*\.hi
+/sources/haskell/*\.o
+
